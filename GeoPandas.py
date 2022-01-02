@@ -60,24 +60,25 @@ def fn_search(x, y, shapes, properties):
 def fn_coor_2_vill(lon, lat):
     shapes, properties = fn_geo_test()
 
-    '''
-    兒童新樂園	25°05'50.1"N 121°30'53.8"E	台北市	士林區	25.097239, 121.514942
-    台北奧萬大	25°08'32.1"N 121°34'10.8"E	台北市	士林區	25.142235, 121.569657
-    芝山岩	25°06'07.8"N 121°31'51.7"E	台北市	士林區	25.102158, 121.531014
-    '''
+    vill = fn_search(lon, lat, shapes, properties)
 
-    print(len(shapes))
-    # fn_search(121.514942, 25.097239, shapes, properties)
-    # fn_search(121.569657, 25.142235, shapes, properties)
-    fn_search(lon, lat, shapes, properties)
+    return vill
 
 
 def fn_st_test():
-    st.header('Test !')
+    st.header('應用: 利用座標查詢行政區!')
+    lon = st.text_input('經度:', value="121.531014")
+    lat = st.text_input('緯度:', value="25.102158")
+    is_click = st.button('按我查詢')
+
+    if is_click:
+        vill = fn_coor_2_vill(float(lon), float(lat))
+        st.subheader('此座標的行政區是:')
+        st.write(vill)
 
 
 def fn_main():
-    # vill = fn_coor_2_vill(121.531014, 25.102158)
+
     fn_st_test()
 
 
