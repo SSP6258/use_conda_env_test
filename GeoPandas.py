@@ -6,12 +6,12 @@ import streamlit as st
 
 
 def fn_geo_test():
-    path = r'.\mapdata202104280245'
+    path = r'./mapdata202104280245'
     file = r'TOWN_MOI_1100415.shp'
     g = os.path.join(path, file)
     gis_d = gpd.read_file(g, encoding='utf-8')
 
-    path = r'.\mapdata202112240331'
+    path = r'./mapdata202112240331'
     file = r'VILLAGE_MOI_1101214.shp'
     g = os.path.join(path, file)
     gis_v = gpd.read_file(g, encoding='utf-8')
