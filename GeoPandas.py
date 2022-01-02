@@ -77,6 +77,7 @@ def fn_st_test():
     file = os.path.join(path, output)
     if not os.path.exists(path):
         os.makedirs(path)
+        print(f'{path} created !')
 
     if is_click:
         vill, fig = fn_coor_2_vill(float(lon), float(lat))
@@ -89,12 +90,11 @@ def fn_st_test():
         dic_coor = dict(lon=[lon], lat=[lat], vill=[vill], check=[check])
         df = pd.DataFrame(dic_coor, index=None)
         df.to_csv(file)
+        print(f' {file} saved !')
 
 
 def fn_main():
-
     fn_st_test()
-
 
 
 if __name__ == '__main__':
