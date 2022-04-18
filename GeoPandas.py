@@ -82,7 +82,7 @@ def fn_st_test():
     if is_click:
         vill, fig = fn_coor_2_vill(float(lon), float(lat))
         st.write(' ')
-        st.subheader(f'此座標的行政區是: {vill}')
+        st.subheader(f'此座標的行政區是: {vill} !')
         st.write(' ')
         st.pyplot(fig)
 
