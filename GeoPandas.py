@@ -86,11 +86,11 @@ def fn_st_test():
         st.write(' ')
         st.pyplot(fig)
 
-        check = f'{lon}_{lat}_{vill}'
-        dic_coor = dict(lon=[lon], lat=[lat], vill=[vill], check=[check])
-        df = pd.DataFrame(dic_coor, index=None)
-        df.to_csv(file)
-        print(f' {file} saved !')
+        # check = f'{lon}_{lat}_{vill}'
+        # dic_coor = dict(lon=[lon], lat=[lat], vill=[vill], check=[check])
+        # df = pd.DataFrame(dic_coor, index=None)
+        # df.to_csv(file)
+        # print(f' {file} saved !')
 
 
 def fn_main():
